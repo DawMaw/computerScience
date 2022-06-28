@@ -4,12 +4,12 @@
 
 print("This program calculates the future value of an investment")
 
-payment = eval(input("Enter amount to invest each year: "))
-apr = eval(input("Enter the annual interest rate: "))
+principal = eval(input("Enter the initial principal: "))
+rate = eval(input("Enter the interest rate: "))
+periods = eval(input("Enter the number of compounding periods per year: "))
 years = eval(input("Enter the number of years: "))
 
-principal = 0.0
 for i in range(years):
-    principal = (principal + payment) * (1 + apr)
+    principal = principal * (1 + rate/periods)
 
 print("The amount in", years, " years is:", principal)
